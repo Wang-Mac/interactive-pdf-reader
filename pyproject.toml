@@ -1,0 +1,45 @@
+[project]
+name = "interactive-pdf-reader"
+version = "0.1.0"
+description = "A learning project for interactive PDF question answering with LangChain and Streamlit"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb",
+    "langchain",
+    "langchain-chroma",
+    "langchain-community",
+    "langchain-nvidia-ai-endpoints",
+    "langchain-text-splitters",
+    "pypdf",
+    "python-dotenv",
+    "socksio>=1.0.0",
+    "streamlit",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.scripts]
+pdf-reader = "pdf_reader.main:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

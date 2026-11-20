@@ -1,0 +1,52 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*$py.class
+build/
+dist/
+wheels/
+*.egg-info
+*.egg
+.eggs/
+.python-build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Application runtime data
+/data/uploads/*
+!/data/uploads/.gitkeep
+/data/chroma/*
+!/data/chroma/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+*.code-workspace
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
